@@ -98,7 +98,7 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $DESC[$lang['id_lang']] = '';
         }
         Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC, true);
         return true;
     }
     public function thankssample_demo_5()
@@ -112,7 +112,7 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $DESC[$lang['id_lang']] = '';
         }
         Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC, true);
         return true;
     }
     public function thankssample_demo_6()
@@ -126,7 +126,7 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $DESC[$lang['id_lang']] = 'Platinum is an Premium Prestashop Template which is the most perfect solution for your online shop website.';
         }
         Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC, true);
         return true;
     }
     public function LogoInsert($logo = "logo.png")
@@ -139,7 +139,7 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $DESC[$lang['id_lang']] = 'Platinum is an Premium Prestashop Template which is the most perfect solution for your online shop website.';
         }
         Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC, true);
         return true;
     }
     public function renderWidget($hookName = null, $configuration = array())
