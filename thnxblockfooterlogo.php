@@ -111,12 +111,12 @@ class thnxblockfooterlogo extends Module implements WidgetInterface
 		Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC',$DESC,true);
 		return true;
 	}
-	public function renderWidget($hookName = null, array $configuration = [])
+	public function renderWidget($hookName = null, $configuration = array())
 	{
 	    $this->smarty->assign($this->getWidgetVariables($hookName,$configuration));
 	    return $this->fetch('module:'.$this->name.'/views/templates/front/'.$this->name.'.tpl');	
 	}
-	public function getWidgetVariables($hookName = null, array $configuration = [])
+	public function getWidgetVariables($hookName = null, $configuration = array())
 	{
 		$return_arr = array();
 	    $imgname = Configuration::get('thnxBLOCKFOOTERLOGO_IMG', $this->context->language->id);
