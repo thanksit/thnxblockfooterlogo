@@ -143,7 +143,7 @@ class thnxblockfooterlogo extends Module implements WidgetInterface
 						return $error;
 					else
 					{
-						$ext = substr($_FILES['thnxBLOCKFOOTERLOGO_IMG_'.$lang['id_lang']]['name'], strrpos($_FILES['thnxBLOCKFOOTERLOGO_IMG_'.$lang['id_lang']]['name'], '.') + 1);
+						$ext = Tools::substr($_FILES['thnxBLOCKFOOTERLOGO_IMG_'.$lang['id_lang']]['name'], strrpos($_FILES['thnxBLOCKFOOTERLOGO_IMG_'.$lang['id_lang']]['name'], '.') + 1);
 						$file_name = md5($_FILES['thnxBLOCKFOOTERLOGO_IMG_'.$lang['id_lang']]['name']).'.'.$ext;
 
 						if (!move_uploaded_file($_FILES['thnxBLOCKFOOTERLOGO_IMG_'.$lang['id_lang']]['tmp_name'], dirname(__FILE__).DIRECTORY_SEPARATOR.'img'.DIRECTORY_SEPARATOR.$file_name))
