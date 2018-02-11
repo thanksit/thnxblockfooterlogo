@@ -64,27 +64,31 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             return true;
         }
     }
-    public function thankssampledata($demo=NULL)
+    public function thankssampledata($demo = null)
     {
-        if (($demo==NULL) || (empty($demo))) {
+        if (($demo == null) || (empty($demo))) {
             $demo = "demo_1";
         }
         $func = 'thankssample_'.$demo;
-        if (method_exists($this,$func)) {
+        if (method_exists($this, $func)) {
             $this->{$func}();
         }
         return true;
     }
-    public function thankssample_demo_1() {
+    public function thankssample_demo_1()
+    {
         $this->LogoInsert("logo.png");
     }
-    public function thankssample_demo_2() {
+    public function thankssample_demo_2()
+    {
         $this->LogoInsert("logo-w.png");
     }
-    public function thankssample_demo_3() {
+    public function thankssample_demo_3()
+    {
         $this->LogoInsert("logo.png");
     }
-    public function thankssample_demo_4() {
+    public function thankssample_demo_4()
+    {
         $logo = "logo-w.png";
         $languages = Language::getLanguages(false);
         $imgname = array();
@@ -93,11 +97,12 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $imgname[$lang['id_lang']] = $logo;
             $DESC[$lang['id_lang']] = '';
         }
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG',$imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC',$DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
         return true;
     }
-    public function thankssample_demo_5() {
+    public function thankssample_demo_5()
+    {
         $logo = "logo-w.png";
         $languages = Language::getLanguages(false);
         $imgname = array();
@@ -106,11 +111,12 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $imgname[$lang['id_lang']] = $logo;
             $DESC[$lang['id_lang']] = '';
         }
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG',$imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC',$DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
         return true;
     }
-    public function thankssample_demo_6() {
+    public function thankssample_demo_6()
+    {
         $logo = "logo.png";
         $languages = Language::getLanguages(false);
         $imgname = array();
@@ -119,8 +125,8 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $imgname[$lang['id_lang']] = $logo;
             $DESC[$lang['id_lang']] = 'Platinum is an Premium Prestashop Template which is the most perfect solution for your online shop website.';
         }
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG',$imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC',$DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
         return true;
     }
     public function LogoInsert($logo = "logo.png")
@@ -132,14 +138,14 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
             $imgname[$lang['id_lang']] = $logo;
             $DESC[$lang['id_lang']] = 'Platinum is an Premium Prestashop Template which is the most perfect solution for your online shop website.';
         }
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG',$imgname);
-        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC',$DESC,true);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_IMG', $imgname);
+        Configuration::updateValue('thnxBLOCKFOOTERLOGO_DESC', $DESC,true);
         return true;
     }
     public function renderWidget($hookName = null, $configuration = array())
     {
-        $this->smarty->assign($this->getWidgetVariables($hookName,$configuration));
-        return $this->fetch('module:'.$this->name.'/views/templates/front/'.$this->name.'.tpl');    
+        $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
+        return $this->fetch('module:'.$this->name.'/views/templates/front/'.$this->name.'.tpl');
     }
     public function getWidgetVariables($hookName = null, $configuration = array())
     {
@@ -153,8 +159,7 @@ class ThnxBlockFooterLogo extends Module implements WidgetInterface
     }
     public function postProcess()
     {
-        if (Tools::isSubmit('submit'.$this->name))
-        {
+        if (Tools::isSubmit('submit'.$this->name)) {
             $languages = Language::getLanguages(false);
             $values = array();
             $update_images_values = false;
